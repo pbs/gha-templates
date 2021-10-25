@@ -5,6 +5,7 @@ on:
       path:
         description: 'An optional string to follow the url prefix to clear. Can include *. Default is * (everything).'
         required: false
+        type: string
         default: '*'
     secrets:
       iam_role:
