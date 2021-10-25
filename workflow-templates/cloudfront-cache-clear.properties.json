@@ -1,5 +1,8 @@
 {
     "name": "Cloudfront Cache Clear",
     "description": "A template for running cloudfront cache clears on your repository, but limited to sites behind the URI_PREFIX secret added to the repo. Also requires DISTRO_ID and IAM_ROLE secrets to be set.",
-    "iconName": "cloud"
+    "iconName": "cloud",
+    "filePatterns": [
+        ".*"
+    ]
 }
