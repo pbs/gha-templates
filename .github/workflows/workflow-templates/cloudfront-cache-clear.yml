@@ -1,11 +1,18 @@
 name: Cloudfront Cache Clear
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       path:
         description: 'An optional string to follow the url prefix to clear. Can include *. Default is * (everything).'
         required: false
         default: '*'
+    secrets:
+      iam_role:
+        required: true
+      distro_id:
+        required: true
+      uri_prefix:
+        required: true
 jobs:
   deploy:
     name: Cloudfront Cache invalidation
